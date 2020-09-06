@@ -126,19 +126,47 @@ _seq_cinco:
     	;CALL    DELAY1S
     	RETURN
 _seq_seis:
-    	MOV #0X1, W2
-	CALL evaluar_boton
-    	MOV W2, LATB
-    	;CALL DELAY1S
-_IZQ:
-    	SL W2,W3
-	CALL evaluar_boton
-    	MOV W3, LATB
-    	MOV W3,W2
-    	;CALL DELAY1S
-    	BRA NC, RETORNAR
-	CALL evaluar_boton
-    	GOTO _IZQ
+    	BSET    LATB, #0x0
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x0
+	BSET    LATB, #0x1
+        ;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x1
+	BSET    LATB, #0x2
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x2
+	BSET    LATB, #0x3
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x3
+	BSET    LATB, #0x4
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x4
+	BSET    LATB, #0x5
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x5
+	BSET    LATB, #0x6
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x6
+	BSET    LATB, #0x7
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x7
+	BSET    LATB, #0x8
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x8
+	BSET    LATB, #0x9
+	;CALL    DELAY1S
+	CALL    evaluar_boton
+	BCLR    LATB, #0x9
+	RETURN
 _seq_siete:
     	MOV #0X0200, W2
     	MOV W2, LATB
