@@ -72,6 +72,13 @@ _seq_dos:
         MOV     #0X5555,W0
 	MOV     W0,LATB
 	RETURN
+_seq_cuatro:
+        MOV     #0X5555,W0
+	MOV     W0,LATB
+	CALL    DELAY1S
+	MOV     #0XAAAA,W0
+	MOV     W0,LATB
+	CALL    DELAY1S
         
 .END
 
