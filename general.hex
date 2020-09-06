@@ -83,6 +83,30 @@ _seq_tres:
     	MOV	#0X2AA,	W0
     	MOV	W0, LATB
     	RETURN
+_seq_seis:
+        MOV     #0X0000,W0
+	MOV     W0,LATB
+	CALL    DELAY1S
+	BSET    LATB, #0x0
+	CALL    DELAY1S
+	BSET    LATB, #0x1
+        CALL    DELAY1S
+	BSET    LATB, #0x2
+	CALL    DELAY1S
+	BSET    LATB, #0x3
+	CALL    DELAY1S
+	BSET    LATB, #0x4
+	CALL    DELAY1S
+	BSET    LATB, #0x5
+	CALL    DELAY1S
+	BSET    LATB, #0x6
+	CALL    DELAY1S
+	BSET    LATB, #0x7
+	CALL    DELAY1S
+	BSET    LATB, #0x8
+	CALL    DELAY1S
+	BSET    LATB, #0x9
+	CALL    DELAY1S
 .END
 
 
