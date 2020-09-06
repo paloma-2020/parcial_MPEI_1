@@ -116,6 +116,16 @@ _seq_seis:
 	BSET    LATB, #0x9
 	CALL    DELAY1S
 	RETURN
+_seq_ocho:
+       MOV     #0X001F,W0
+       MOV     W0, LATB
+       CALL    DELAY1S
+       MOV     #0X0000,W0
+       MOV     W0, LATB
+       MOV     #0X03E0,W1
+       MOV     W1, LATB
+       CALL    DELAY1S
+       RETURN
 
 .END
 
