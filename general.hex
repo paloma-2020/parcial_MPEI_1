@@ -170,51 +170,37 @@ _seq_seis:
 _seq_siete:
     	MOV #0X0200, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
+    
 	CALL    evaluar_boton
     	MOV #0X0100, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X0080, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X40, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X020, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X010, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
-	CALL    evaluar_boton
-    	MOV #0X020, W2
-    	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X8, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X4, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X2, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X1, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	MOV #0X0, W2
     	MOV W2, LATB
-    	;CALL DELAY1S
 	CALL    evaluar_boton
     	RETURN
 _seq_ocho:
