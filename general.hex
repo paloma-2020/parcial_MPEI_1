@@ -33,14 +33,14 @@ _bucle:
 	CALL    RUTINA  ; llama la secuencia que quiero evaluar
 	GOTO    _bucle      
 evaluar_boton:
-        ;BCLR   LATB, #0XF
+        
 	CALL DELAY1S
         MOV    PORTB, W4
 	MOV    #0X0400, W5
 	AND    W4,W5, W0
 	CP0    W0 
 	BRA    Z, RETORNO 
-	;BSET  LATB, #0XF
+	
 	CP0    j
 	BRA    Z,REINICIO
 	DEC    j
@@ -109,61 +109,60 @@ _seq_cuatro:
         MOV     #0X5555,W0
 	MOV     W0,LATB
 	CALL evaluar_boton
-	;CALL    DELAY1S
+	
 	MOV     #0XAAAA,W0
 	MOV     W0,LATB
 	CALL evaluar_boton
-	;CALL    DELAY1S
+	
 	RETURN
 _seq_cinco:
     	MOV	#0X20,	W0
     	MOV     W0, LATB
 	CALL evaluar_boton
-    	;CALL    DELAY1S
     	MOV     #0X0,W0
     	MOV     W0, LATB
 	CALL evaluar_boton
-    	;CALL    DELAY1S
+    	
     	RETURN
 _seq_seis:
     	BSET    LATB, #0x0
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	BCLR    LATB, #0x0
 	BSET    LATB, #0x1
-        ;CALL    DELAY1S
+       
 	CALL    evaluar_boton
 	BCLR    LATB, #0x1
 	BSET    LATB, #0x2
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	BCLR    LATB, #0x2
 	BSET    LATB, #0x3
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	BCLR    LATB, #0x3
 	BSET    LATB, #0x4
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	BCLR    LATB, #0x4
 	BSET    LATB, #0x5
-	;CALL    DELAY1S
+
 	CALL    evaluar_boton
 	BCLR    LATB, #0x5
 	BSET    LATB, #0x6
-	;CALL    DELAY1S
+
 	CALL    evaluar_boton
 	BCLR    LATB, #0x6
 	BSET    LATB, #0x7
-	;CALL    DELAY1S
+
 	CALL    evaluar_boton
 	BCLR    LATB, #0x7
 	BSET    LATB, #0x8
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	BCLR    LATB, #0x8
 	BSET    LATB, #0x9
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	BCLR    LATB, #0x9
 	RETURN
@@ -206,7 +205,7 @@ _seq_siete:
 _seq_ocho:
        MOV     #0X001F,W0
        MOV     W0, LATB
-       ;CALL    DELAY1S
+     
        CALL evaluar_boton
        MOV     #0X0000,W0
        MOV     W0, LATB
@@ -219,27 +218,27 @@ _seq_ocho:
 _seq_nueve:
 	MOV     #0X0,W1
 	MOV     W1, LATB
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	MOV     #0X201,W1
 	MOV     W1, LATB
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	MOV     #0X102,W1
 	MOV     W1, LATB
-	;CALL	DELAY1S
+	
 	CALL    evaluar_boton
 	MOV     #0X84,W1
 	MOV     W1, LATB
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	MOV     #0X48,W1
 	MOV     W1, LATB
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	MOV     #0X30,W1
 	MOV     W1, LATB
-	;CALL    DELAY1S
+	
 	CALL    evaluar_boton
 	RETURN
 
