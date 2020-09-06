@@ -32,6 +32,7 @@ REPETIR:
         GOTO    REPETIR
 RETORNAR:
         RETURN 
+	
         
 .END
 
@@ -132,6 +133,57 @@ _seq_seis:
 	CALL    DELAY1S
 	BCLR    LATB, #0x9
 	RETURN
+
+_seq_6:
+    	MOV #0X1, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+_IZQ:
+    	SL W2,W3
+    	MOV W3, LATB
+    	MOV W3,W2
+    	CALL DELAY1S
+    	BRA NC, RETORNAR
+    	GOTO _IZQ
+_seq_siete:
+    	MOV #0X0200, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X0100, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X0080, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X40, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X020, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X010, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X020, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X8, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X4, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X2, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X1, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	MOV #0X0, W2
+    	MOV W2, LATB
+    	CALL DELAY1S
+    	RETURN
+    
 _seq_ocho:
        MOV     #0X001F,W0
        MOV     W0, LATB
@@ -142,6 +194,27 @@ _seq_ocho:
        MOV     W1, LATB
        CALL    DELAY1S
        RETURN
+       
+ _seq_nueve:
+	MOV     #0X0,W1
+	MOV     W1, LATB
+	CALL    DELAY1S
+	MOV     #0X201,W1
+	MOV     W1, LATB
+	CALL    DELAY1S
+	MOV     #0X102,W1
+	MOV     W1, LATB
+	CALL	DELAY1S
+	MOV     #0X84,W1
+	MOV     W1, LATB
+	CALL    DELAY1S
+	MOV     #0X48,W1
+	MOV     W1, LATB
+	CALL    DELAY1S
+	MOV     #0X30,W1
+	MOV     W1, LATB
+	CALL    DELAY1S
+	RETURN
 
 .END
 
