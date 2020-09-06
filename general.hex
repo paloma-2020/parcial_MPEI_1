@@ -91,6 +91,15 @@ _seq_cuatro:
 	MOV     W0,LATB
 	CALL    DELAY1S
 	RETURN
+	
+_seq_cinco:
+    	MOV	#0X20,	W0
+    	MOV W0, LATB
+    	CALL DELAY1S
+    	MOV #0X0,	W0
+    	MOV W0, LATB
+    	CALL DELAY1S
+    	RETURN
 _seq_seis:
         MOV     #0X0000,W0
 	MOV     W0,LATB
