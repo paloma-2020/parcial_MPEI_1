@@ -34,3 +34,46 @@ RETORNAR:
         RETURN 
         
 .END
+
+
+;;;;;;;;;;;;;;;;;;;;; crecion de secuencias individuales
+;INCLUIR UN ARCHIVO DE CABECERA
+; PARCIAL 1 PRIMER CORTE
+; Estudiantes:
+;Paloma Alvarez Peniche
+;Laura daniela fandiño
+ 
+.global _main
+_main:
+	MOV     #0X0800, W0    ; Vector que describe como se va a comportar el PORTB 
+	MOV     W0, TRISB      ; Declaracion de variables de entrada y salida 
+        MOV        #0X0000, W0
+        MOV        W0, PORTB
+_bucle:
+	CALL    _seq_dos    ; llama la secuencia que quiero evaluar
+	GOTO    _bucle      
+	
+DELAY1S:
+        MOV        #1000,W0
+REPETIR:
+        DEC        W0, W1
+        MOV        W1, W0
+        BRA        Z, RETORNAR
+        REPEAT  #5000
+        NOP
+        GOTO    REPETIR
+RETORNAR:
+        RETURN 
+_seq_cero:
+        MOV     #0X0000, W0
+	MOV     W0,LATB
+	RETURN 
+_seq_dos:
+        MOV     #0X5555,W0
+	MOV     W0,LATB
+	RETURN
+        
+.END
+
+
+
