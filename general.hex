@@ -7,6 +7,8 @@
 .global _main
 ;;;;; Configuraciones para el contador 
 ;dentro del main establecer la configuracion
+
+
 	 .data
 i:      .hword 0x8000       ;Crear variable i en la posicion 0x8000 
 j:      .hword 0x8002       ;Crear variable j en la posicion 0x8001  
@@ -16,6 +18,13 @@ j:      .hword 0x8002       ;Crear variable j en la posicion 0x8001
       
 .equ	  valor,9
 ;;;;;;;;;
+
+
+; NOTA DE SIMULACION.
+;Puesto que no se esta haciendo uso de un antirrebote, 
+;para cambiar de scuencia, se debe dejar el boton en alto, 
+;hasta que se visualice la siguiente. Luego, se debe dejar el boton en 0.
+
 _main:
 	MOV     #0X0400, W0    ; Vector que describe como se va a comportar el PORTB 
 	MOV     W0, TRISB      ; Declaracion de variables de entrada y salida 
